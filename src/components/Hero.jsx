@@ -6,48 +6,18 @@ import BlurText from "../assets/BlurText.jsx";
 // Imports
 import Orb from "../assets/Orb.jsx";
 import Particles from "../assets/Particales.jsx";
-import Dock from "../assets/Dock.jsx";
 import GradientText from "../assets/GradientText.jsx";
 
-// Import logos from the logos folder
-import InstagramLogo from "../assets/logos/instagram.png";
-import LinkedinLogo from "../assets/logos/linkedin.png";
-import GithubLogo from "../assets/logos/github.png";
-
-import { VscHome, VscArchive, VscAccount } from "react-icons/vsc";
-
 const Hero = () => {
-  const items = [
-    {
-      icon: <VscHome size={18} />,
-      label: "Instagram",
-      onClick: () => window.open("https://www.instagram.com/mohit___551/"),
-      imgSrc: InstagramLogo, // Use the imported Instagram logo
-    },
-    {
-      icon: <VscArchive size={18} />,
-      label: "Linkedin",
-      onClick: () =>
-        window.open("https://www.linkedin.com/in/mohitaggarwal551/"),
-      imgSrc: LinkedinLogo, // Use the imported Linkedin logo
-    },
-    {
-      icon: <VscAccount size={18} />,
-      label: "GitHub",
-      onClick: () => window.open("https://github.com/Mohit776"),
-      imgSrc: GithubLogo, // Use the imported GitHub logo
-    },
-  ];
-
   return (
-    <div className="h-100%">
+    <div className="h-[125vh] bg-black">
       {/* ==========================
                   Particles Background
           =========================== */}
       <div className="absolute z-0 top-24 h-[84%] w-[90%] opacity-50">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
-          particleCount={250}
+          particleCount={200}
           particleSpread={10}
           speed={0.15}
           particleBaseSize={100}
@@ -86,6 +56,8 @@ const Hero = () => {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 display: "inline-block",
+              fontFamily: "Poetsen One"
+
               }}
             >
               <BlurText
@@ -93,30 +65,18 @@ const Hero = () => {
                 delay={250}
                 animateBy="words"
                 direction="down"
-                className="text-6xl mb-8 font-bold mt-8 text-white"
+                className="text-6xl mb-4 font-bold mt-8 text-white"
               />
             </div>
             <GradientText
               colors={["#ff6ec4", "#7873f5", "#4ade80", "#22d3ee", "#facc15"]}
               animationSpeed={3}
               showBorder={true}
-              className=" text-2xl mb-8 text-white font-semibold my-2"
+              className=" text-2xl mb-8 text-white font-semibold "
             >
               Web Developer
             </GradientText>
           </div>
-
-          {/* ==========================
-                    Dock (Optional)
-              ========================== */}
-          {/* <div className="">
-            <Dock
-              items={items}
-              panelHeight={68}
-              baseItemSize={50}
-              magnification={90}
-            />
-          </div> */}
         </div>
 
         {/* ==========================
@@ -141,5 +101,9 @@ const Hero = () => {
     </div>
   );
 };
+
+
+
+
 
 export default Hero;

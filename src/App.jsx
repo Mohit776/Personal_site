@@ -1,6 +1,10 @@
 // Imports
 import Navbar from "./components/navbar.jsx";
+import Footer from "./components/footer.jsx";
 import Hero from "./components/Hero.jsx";
+import Skills from "./components/Skills.jsx";
+import About from "./components/About.jsx";
+import Project from "./components/Project.jsx";
 
 
 function App() {
@@ -18,6 +22,12 @@ function App() {
           =========================== */}
 
         <Hero />
+        <About/>
+        <Skills/>
+        <Project/>
+        <Footer/>
+
+
       </div>
     </>
   );

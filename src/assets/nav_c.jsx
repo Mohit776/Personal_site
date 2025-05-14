@@ -178,7 +178,7 @@ const GooeyNav = ({
             position: absolute;
             inset: -75px;
             z-index: -2;
-            background: black;
+            
           }
           .effect.filter::after {
             content: "";
@@ -267,7 +267,7 @@ const GooeyNav = ({
             }
           }
           li.active {
-            color: black;
+            color: Black;
             text-shadow: none;
           }
           li.active::after {
