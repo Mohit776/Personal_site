@@ -5,12 +5,14 @@ import Hero from "./components/Hero.jsx";
 import Skills from "./components/Skills.jsx";
 import About from "./components/About.jsx";
 import Project from "./components/Project.jsx";
+import Thread from "./components/Thread.jsx";
+
 
 
 function App() {
   return (
     <>
-      <div className="bg-black w-screen h-screen">
+      <div className="bg-black w-screen h-screen font-semibold ">
         {/*==========================
                   Navbar
           =========================== */}
@@ -22,9 +24,11 @@ function App() {
           =========================== */}
 
         <Hero />
+      
         <About/>
         <Skills/>
-        <Project/>
+        <Project/> 
+         <Thread/>
         <Footer/>
 
 

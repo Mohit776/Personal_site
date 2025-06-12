@@ -63,6 +63,7 @@ function MenuItem({ link, text, image }) {
         className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-white text-[4vh] hover:text-[#060606] focus:text-white focus-visible:text-[#060606]"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+           style={{ fontFamily: "'Yatra One', cursive" }}
       >
         {text}
       </a>
@@ -72,7 +73,7 @@ function MenuItem({ link, text, image }) {
       >
         <div className="h-full w-full flex items-center justify-center" ref={marqueeInnerRef}>
           <div className="flex items-center relative justify-center h-full w-full">
-            <span className="text-[#060606] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]">
+            <span className="text-[#060606] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]"    style={{ fontFamily: "'Yatra One', cursive" }}>
               {text}
             </span>
             <div

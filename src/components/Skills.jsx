@@ -59,6 +59,10 @@ const Backend = [
     text: "EXPRESS JS",
     image: "https://picsum.photos/600/400?random=2",
   },
+  {
+    text: "MongoDB",
+    image: "https://picsum.photos/600/400?random=2",
+  },
 
 ];
 const P_language = [
@@ -92,7 +96,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-black py-20 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen bg-gray-950 py-20 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -102,23 +106,48 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <GradientText className="text-5xl sm:text-6xl font-bold mb-4">
-            Skills
-          </GradientText>
+             <div 
+          className='text-6xl text-center py-8 relative'
+          style={{ 
+            fontFamily: "'Yatra One', cursive",
+            background: "linear-gradient(45deg, #FF6EC4, #7873F5, #4ADE80, #22D3EE, #FACC15)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundSize: "200% auto",
+            animation: "gradient 5s linear infinite",
+          }}
+        >
+          Skills
+          <div 
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 h-1 w-48"
+            style={{
+              background: "linear-gradient(45deg, #FF6EC4, #7873F5, #4ADE80, #22D3EE, #FACC15)",
+              backgroundSize: "200% auto",
+              animation: "gradient 5s linear infinite",
+            }}
+          />
+        </div>
+
+        <style jsx>{`
+          @keyframes gradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+          }
+        `}</style>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Technologies and tools I work with to create amazing digital
             experiences
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="skillsC grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 50 }}
+              key={index}
+              initial={{ opacity: 0, y: 75 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.3 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            
               className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-gray-700 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -127,7 +156,7 @@ const Skills = () => {
                 >
                   <span className="text-xl font-bold">{index + 1}</span>
                 </div>
-                <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+                <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"    style={{ fontFamily: "'Yatra One', cursive" }}>
                   {category.title}
                 </h2>
               </div>

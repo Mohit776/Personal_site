@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center text-white z-50 relative bg-black h-[45%]">
+    <div className="flex justify-between items-center text-white z-50 relative bg-gray-950 h-[45%]">
       {/* Hyperspeed Section */}
       <div className="ml-3 w-6/12 h-72">
         {/* <Hyperspeed

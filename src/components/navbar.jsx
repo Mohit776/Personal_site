@@ -13,7 +13,7 @@ const items = [
 const Navbar = () => {
   return (
     <div
-      className="flex justify-center items-center text-white z-50 fixed top-0 w-full shadow-sm shadow-yellow-200"
+      className="flex justify-center items-center text-white z-50 top-0 w-full shadow-sm shadow-yellow-200"
       style={{
         background: "rgba(30, 30, 30, 0.35)", // semi-transparent dark background
         backdropFilter: "blur(12px) saturate(160%)", // glass effect
