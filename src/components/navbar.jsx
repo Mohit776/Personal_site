@@ -21,6 +21,7 @@ const Navbar = () => {
         borderBottom: "1px solid rgba(255,255,255,0.15)",
       }}
     >
+      
       <div className="h-24 flex items-center relative z-100">
         <GooeyNav
           items={items}
