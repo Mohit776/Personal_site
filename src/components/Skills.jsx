@@ -96,7 +96,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-gray-950 py-20 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen bg-gray-950 pb-20 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div

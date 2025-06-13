@@ -8,7 +8,9 @@ import GradientText from "../assets/GradientText.jsx";
 
 const Hero = () => {
   return (
-    <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden px-28">
+   < section id="home">
+
+    <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden pt-12 px-28">
       {/* Particles Background */}
       <div className="absolute z-0  h-[84%] w-full opacity-50">
         <Particles
@@ -89,7 +91,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></ section>
   );
 };
 

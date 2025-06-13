@@ -42,7 +42,7 @@ const About = () => {
   ];
 
   return (
-    <>
+    <> <section id='about'></section>
       <div className='bg-gray-950 min-h-screen'>
         <div 
           className='text-6xl text-center py-8 relative'

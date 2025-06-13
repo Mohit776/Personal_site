@@ -35,6 +35,8 @@ const Footer = () => {
   };
 
   return (
+   < section id='contact'>
+
     <footer className="bg-gray-900 text-gray-300 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -114,6 +116,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  </section>
   );
 };
 

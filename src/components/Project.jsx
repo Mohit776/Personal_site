@@ -32,6 +32,8 @@ const Project = () => {
   ];
 
   return (
+
+    <section id="projects">
     <div className='min-h-screen bg-gray-950 pb-20'>
       <div>
          <div 
@@ -129,7 +131,7 @@ const Project = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div></section>
   );
 };
 
