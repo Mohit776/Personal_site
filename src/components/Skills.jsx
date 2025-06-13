@@ -196,17 +196,15 @@ const Skills = () => {
               "Docker",
               "AWS",
               "Figma",
-              "Jest",
-              "Webpack",
-              "Redux",
-              "Three.js",
-              "GSAP",
-              "Sass",
+              "Versel",
+              "Next.js"
+              
+             
             ].map((tool) => (
               <motion.div
                 key={tool}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="px-4 py-2 bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-700 transition-all cursor-default"
+                className="px-4 py-2 bg-gray-800 text-white rounded-full text-sm font-medium hover:bg-gray-700 transition-all cursor-default"
               >
                 {tool}
               </motion.div>

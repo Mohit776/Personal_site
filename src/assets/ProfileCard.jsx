@@ -223,64 +223,31 @@ const ProfileCard = ({
   return (
     <div
       ref={wrapRef}
-      className={`relative perspective-500 transform-gpu touch-none ${className}`}
+      className={`relative perspective-500 transform-gpu touch-none ${className} transition-all duration-500`}
       style={cardStyle}
     >
       {/* Background glow effect */}
-      <div className="absolute -inset-2.5 bg-inherit bg-cover rounded-inherit transition-all duration-500 ease-in-out filter contrast-200 saturate-200 blur-3xl scale-80 transform-gpu bg-no-repeat active:filter-contrast-100 active:saturate-200 active:blur-xl active:scale-90" 
+      <div className="absolute -inset-2.5 bg-inherit bg-cover rounded-inherit transition-all duration-500 ease-in-out filter contrast-200 saturate-0 hover:saturate-200 blur-3xl scale-80 transform-gpu bg-no-repeat active:filter-contrast-100 active:saturate-200 active:blur-xl active:scale-90" 
            style={{ backgroundImage: 'var(--behind-gradient)' }} />
 
       {/* Main card */}
       <section
         ref={cardRef}
-        className="h-[80svh] max-h-[540px] grid aspect-[0.718] rounded-[30px] relative bg-blend-color-dodge shadow-lg transition-transform duration-1000 ease-in-out transform-gpu overflow-hidden"
+        className="h-[80svh] max-h-[540px] grid aspect-[0.718] rounded-[30px] relative bg-blend-color-dodge shadow-lg transition-all duration-500 ease-in-out transform-gpu overflow-hidden filter grayscale hover:grayscale-0"
         style={{
           boxShadow: 'rgba(0, 0, 0, 0.8) calc((var(--pointer-from-left) * 10px) - 3px) calc((var(--pointer-from-top) * 20px) - 6px) 20px -5px',
           backgroundImage: 'var(--behind-gradient)',
           transform: 'translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg)',
         }}
       >
-        {/* Card content */}
-        <div className="absolute inset-px rounded-[30px] transform-gpu z-10" 
+        {/* Card content - Update the existing content div */}
+        <div className="absolute inset-px rounded-[30px] transform-gpu z-10 transition-all duration-500" 
              style={{ backgroundImage: 'var(--inner-gradient)', backgroundColor: 'rgba(0, 0, 0, 0.9)' }}>
           
-          {/* Shine effect */}
-          <div 
-            className="absolute inset-0 rounded-[30px] z-30 mix-blend-color-dodge filter brightness-75 contrast-133 saturate-33 opacity-50"
-            style={{
-              maskImage: 'var(--icon)',
-              maskMode: 'luminance',
-              maskSize: '150%',
-              maskPosition: 'top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x))',
-              backgroundImage: `
-                repeating-linear-gradient(0deg, 
-                  var(--sunpillar-clr-1) 5%, 
-                  var(--sunpillar-clr-2) 10%, 
-                  var(--sunpillar-clr-3) 15%, 
-                  var(--sunpillar-clr-4) 20%, 
-                  var(--sunpillar-clr-5) 25%, 
-                  var(--sunpillar-clr-6) 30%, 
-                  var(--sunpillar-clr-1) 35%),
-                repeating-linear-gradient(-45deg, #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%),
-                radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%)
-              `,
-              backgroundBlendMode: 'color, hard-light',
-              backgroundSize: '500% 500%, 300% 300%, 200% 200%',
-            }}
-          />
-
-          {/* Glare effect */}
-          <div 
-            className="absolute inset-0 rounded-[30px] z-40 mix-blend-overlay filter brightness-80 contrast-120"
-            style={{
-              backgroundImage: 'radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.8) 90%)'
-            }}
-          />
-
-          {/* Avatar content */}
-          <div className="relative w-full h-full mix-blend-screen overflow-hidden">
+          {/* Update Avatar content */}
+          <div className="relative w-full h-full mix-blend-screen overflow-hidden transition-all duration-500">
             <img
-              className="absolute w-full left-1/2 -translate-x-1/2 bottom-0.5"
+              className="absolute w-full left-1/2 -translate-x-1/2 bottom-0.5 transition-all duration-500"
               style={{ opacity: 'calc(1.75 - var(--pointer-from-center))' }}
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
@@ -291,56 +258,48 @@ const ProfileCard = ({
               }}
             />
             
-            {/* Gradient overlay */}
-            <div 
-              className="absolute inset-0 z-10 backdrop-blur-xl pointer-events-none"
-              style={{
-                mask: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%)'
-              }}
-            />
-          </div>
-
-          {/* User info section */}
-          {showUserInfo && (
-            <div className="absolute bottom-5 left-5 right-5 z-20 flex items-center justify-between bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-3 pointer-events-auto">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
-                  <img
-                    src={miniAvatarUrl || avatarUrl}
-                    alt={`${name || "User"} mini avatar`}
-                    className="w-full h-full object-cover rounded-full"
-                    loading="lazy"
-                    onError={(e) => {
-                      const target = e.target;
-                      target.style.opacity = "0.5";
-                      target.src = avatarUrl;
-                    }}
-                  />
+            {/* Update User info section */}
+            {showUserInfo && (
+              <div className="absolute bottom-5 left-5 right-5 z-20 flex items-center justify-between bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-3 pointer-events-auto transition-all duration-500">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
+                    <img
+                      src={miniAvatarUrl || avatarUrl}
+                      alt={`${name || "User"} mini avatar`}
+                      className="w-full h-full object-cover rounded-full"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.target;
+                        target.style.opacity = "0.5";
+                        target.src = avatarUrl;
+                      }}
+                    />
+                  </div>
+                  <div className="flex flex-col items-start gap-1.5">
+                    <div className="text-sm font-medium text-white/90">@{handle}</div>
+                    <div className="text-sm text-white/70">{status}</div>
+                  </div>
                 </div>
-                <div className="flex flex-col items-start gap-1.5">
-                  <div className="text-sm font-medium text-white/90">@{handle}</div>
-                  <div className="text-sm text-white/70">{status}</div>
-                </div>
+                <button
+                  className="border border-white/10 rounded-lg px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm transition-all duration-200 ease-in-out hover:border-white/40 hover:-translate-y-px"
+                  onClick={handleContactClick}
+                  type="button"
+                  aria-label={`Contact ${name || "user"}`}
+                >
+                  {contactText}
+                </button>
               </div>
-              <button
-                className="border border-white/10 rounded-lg px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm transition-all duration-200 ease-in-out hover:border-white/40 hover:-translate-y-px"
-                onClick={handleContactClick}
-                type="button"
-                aria-label={`Contact ${name || "user"}`}
-              >
-                {contactText}
-              </button>
-            </div>
-          )}
+            )}
 
-          {/* Name and title */}
-          <div className="absolute top-12 w-full flex flex-col items-center z-50 mix-blend-luminosity">
-            <h3 className="font-semibold text-[min(5svh,3em)] m-0 bg-gradient-to-b from-white to-[#6f6fbe] bg-clip-text text-transparent">
-              {name}
-            </h3>
-            <p className="font-semibold text-base mt-2 mx-auto w-min relative -top-3 whitespace-nowrap bg-gradient-to-b from-white to-[#4a4ac0] bg-clip-text text-transparent">
-              {title}
-            </p>
+            {/* Update Name and title */}
+            <div className="absolute top-12 w-full flex flex-col items-center z-50 mix-blend-luminosity transition-all duration-500">
+              <h3 className="font-semibold text-[min(5svh,3em)] m-0 bg-gradient-to-b from-white to-[#6f6fbe] bg-clip-text text-transparent transition-all duration-500">
+                {name}
+              </h3>
+              <p className="font-semibold text-base mt-2 mx-auto w-min relative -top-3 whitespace-nowrap bg-gradient-to-b from-white to-[#4a4ac0] bg-clip-text text-transparent transition-all duration-500">
+                {title}
+              </p>
+            </div>
           </div>
         </div>
       </section>

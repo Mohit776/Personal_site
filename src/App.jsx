@@ -5,7 +5,7 @@ import Hero from "./components/Hero.jsx";
 import Skills from "./components/Skills.jsx";
 import About from "./components/About.jsx";
 import Project from "./components/Project.jsx";
-import Thread from "./components/Thread.jsx";
+
 
 
 
@@ -28,7 +28,7 @@ function App() {
         <About/>
         <Skills/>
         <Project/> 
-         <Thread/>
+        
         <Footer/>
 
 
