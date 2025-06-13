@@ -1,31 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import github2 from '../assets/logos/github2.png'
+import airbnb from '../assets/logos/airbnb.jpg'
+import sp from '../assets/logos/sp.png'
+import fs from '../assets/logos/fs.png'
 
 const Project = () => {
   const projects = [
     {
-      title: "Project 1",
-      description: "A brief description of your project goes here. Explain what it does and what technologies you used.",
-      image: "/project1.png", // Add your project images
-      tech: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/yourusername/project1",
+      title: "Air BNB",
+      description: "This project is my  full stack project, majorly focused on backend and tried to give responsive UI, dynamic listings, user authentication, and booking features using modern web development technologies.",
+      image: airbnb, // Add your project images
+      tech: ["Node.js", "MongoDB","TailwindCSS","ExpressJS"],
+      github: "https://github.com/Mohit776/Airbnb_Clone",
       live: "https://project1-demo.com"
     },
     {
-      title: "Project 2",
-      description: "A brief description of your project goes here. Explain what it does and what technologies you used.",
-      image: "/project1.png", // Add your project images
-      tech: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/yourusername/project1",
+      title: "Spotify clone",
+      description: "This is a full stack Spotify clone focused on frontend, with features like  music playback, playlist management, and a responsive UI using modern web development technologies.",
+      image: sp, // Add your project images
+      tech: ["HTML","CSS","JAVASCRIPT"],
+      github: "https://github.com/Mohit776/Spotify",
       live: "https://project1-demo.com"
     },
     {
-      title: "Project 3",
-      description: "A brief description of your project goes here. Explain what it does and what technologies you used.",
-      image: "/project1.png", // Add your project images
-      tech: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/yourusername/project1",
+      title: "Food Share",
+      description: "This is a full‑stack Food Share clone, centered on backend functionality. It features user authentication, post and recipe sharing, real‑time comments/likes, and a responsive UI, built with modern web technologies.",
+      image: fs ,
+      tech: ["Next.JS", "Node.js", "MongoDB", "ExpressJS"],
+      github: "https://github.com/Mohit776/Food_Share",
       live: "https://project1-demo.com"
     },
     // Add more projects here
@@ -74,11 +77,11 @@ const Project = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className='group relative bg-gray-900 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300'
+              className='group relative bg-gray-900 rounded-xl mx-2 overflow-hidden hover:shadow-2xl transition-all duration-300'
             >
               {/* Project Image */}
               <div className='relative h-48 overflow-hidden'>
-                <div className='absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10' />
+                <div className='absolute inset-0 z-10' />
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -100,7 +103,7 @@ const Project = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className='px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300'
+                      className='px-3 py-1 bg-gray-800 rounded-full cursor-pointer text-sm text-gray-300'
                     >
                       {tech}
                     </span>

@@ -1,5 +1,5 @@
 // components/Navbar.jsx
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -22,16 +22,23 @@ const Navbar = ({
   // Update the scroll effect to include more properties
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const threshold = 10;
-      const opacity = Math.min(scrollY / 100, 0.8); // Max opacity of 0.8
-      
-      if (scrollY > threshold) {
-        setScrolled(true);
-        document.querySelector('header').style.setProperty('--scroll-opacity', opacity);
-      } else {
-        setScrolled(false);
-        document.querySelector('header').style.setProperty('--scroll-opacity', 0);
+      try {
+        const scrollY = window.scrollY;
+        const threshold = 10;
+        const opacity = Math.min(scrollY / 100, 0.8);
+        const header = document.querySelector('header');
+        
+        if (!header) return;
+        
+        if (scrollY > threshold) {
+          setScrolled(true);
+          header.style.setProperty('--scroll-opacity', opacity.toString());
+        } else {
+          setScrolled(false);
+          header.style.setProperty('--scroll-opacity', '0');
+        }
+      } catch (error) {
+        console.error('Error handling scroll:', error);
       }
     };
 

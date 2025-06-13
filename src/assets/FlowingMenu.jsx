@@ -68,18 +68,16 @@ function MenuItem({ link, text, image }) {
         {text}
       </a>
       <div
-        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-white translate-y-[101%]"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-white underline translate-y-[101%]"
         ref={marqueeRef}
       >
         <div className="h-full w-full flex items-center justify-center" ref={marqueeInnerRef}>
           <div className="flex items-center relative justify-center h-full w-full">
-            <span className="text-[#060606] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]"    style={{ fontFamily: "'Yatra One', cursive" }}>
+            <span className="text-[#060606] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]" 
+                  style={{ fontFamily: "'Yatra One', cursive" }}>
               {text}
             </span>
-            <div
-              className="w-[70px] h-[7vh] my-[2em] mx-[2vw] p-[1em_0] bg-cover"
-              style={{ backgroundImage: `url(${image})` }}
-            />
+            
           </div>
         </div>
       </div>

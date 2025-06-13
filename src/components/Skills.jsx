@@ -1,51 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
-import BlurText from "../assets/BlurText";
-import GradientText from "../assets/GradientText.jsx";
 import("tailwindcss").Config;
 import FlowingMenu from "../assets/FlowingMenu";
+
 
 const skillCategories = [
   {
     title: "Frontend",
-    skills: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "JavaScript", level: 95 },
-      { name: "TypeScript", level: 80 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "HTML/CSS", level: 95 },
-    ],
     color: "from-purple-500 to-pink-500",
   },
   {
     title: "Backend",
-    skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "Python", level: 75 },
-      { name: "Django", level: 70 },
-      { name: "REST APIs", level: 85 },
-      { name: "GraphQL", level: 75 },
-    ],
     color: "from-blue-500 to-cyan-500",
   },
   {
     title: "Programming",
-    skills: [
-      { name: "MongoDB", level: 80 },
-      { name: "PostgreSQL", level: 75 },
-      { name: "Firebase", level: 70 },
-      { name: "MySQL", level: 65 },
-      { name: "Redis", level: 60 },
-    ],
     color: "from-green-500 to-emerald-500",
   },
 ];
 
 const Frontend = [
-  { text: "HTML", image: "https://icon2.cleanpng.com/20180623/kwp/kisspng-web-development-html-software-development-software-modern-pattern-5b2e9b177ec089.4478529015297810155192.jpg" },
-  { text: "CSS", image: "https://img.icons8.com/fluent/200/css3.png" },
+  { text: "HTML", image: "" },
+  { text: "CSS", image: "" },
   { text: "JAVASCIRPT", image: "https://icon2.cleanpng.com/20180810/ekz/11448a7a96ee808a3cdbaf0df9570976.webp" },
   { text: "REACT", image: "https://picsum.photos/600/400?random=4" },
   { text: "TailwindCSS", image: "https://picsum.photos/600/400?random=4" },
@@ -148,7 +124,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             
-              className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-gray-700 transition-all duration-300"
+              className="bg-gradient-to-br from-gray-900 to-gray-800 mx-2 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-gray-700 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
                 <div
@@ -204,7 +180,7 @@ const Skills = () => {
               <motion.div
                 key={tool}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="px-4 py-2 bg-gray-800 text-white rounded-full text-sm font-medium hover:bg-gray-700 transition-all cursor-default"
+                className="px-4 py-2 bg-gray-800 text-white cursor-pointer rounded-full text-sm font-medium hover:bg-gray-700 transition-all "
               >
                 {tool}
               </motion.div>
