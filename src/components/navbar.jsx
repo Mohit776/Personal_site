@@ -19,9 +19,20 @@ const Navbar = ({
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
 
+  // Update the scroll effect to include more properties
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const scrollY = window.scrollY;
+      const threshold = 10;
+      const opacity = Math.min(scrollY / 100, 0.8); // Max opacity of 0.8
+      
+      if (scrollY > threshold) {
+        setScrolled(true);
+        document.querySelector('header').style.setProperty('--scroll-opacity', opacity);
+      } else {
+        setScrolled(false);
+        document.querySelector('header').style.setProperty('--scroll-opacity', 0);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -33,7 +44,20 @@ const Navbar = ({
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900 shadow-lg' : 'bg-transparent'} text-white`}>
+    <header 
+      className={`
+        fixed w-full z-50 transition-all duration-300 
+        ${scrolled 
+          ? 'bg-gray-900/[var(--scroll-opacity)] backdrop-blur-[8px] border-b border-white/10 shadow-lg' 
+          : 'bg-transparent'
+        } 
+        text-white
+      `}
+      style={{ 
+        '--scroll-opacity': 0,
+        backdropFilter: scrolled ? 'blur(8px)' : 'none',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
