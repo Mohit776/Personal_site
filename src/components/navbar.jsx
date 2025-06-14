@@ -138,21 +138,8 @@ const Navbar = ({
             </ScrollLink>
           ))}
 
-          {/* Mobile CTA Button */}
-          {ctaButton && (
-            <div className="px-3 py-2">
-              <ScrollLink
-                to={ctaButton.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className={`block w-full text-center px-4 py-2 rounded-md text-base font-medium bg-${logoColor} text-white hover:bg-opacity-90 transition-all`}
-                onClick={() => setIsOpen(false)}
-              >
-                {ctaButton.text}
-              </ScrollLink>
-            </div>
-          )}
+      
+         
         </div>
       </div>
     </header>
