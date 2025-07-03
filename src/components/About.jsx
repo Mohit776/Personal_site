@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import ProfilePhoto from "../assets/Photo.png";
+import Particles from "../assets/Particales.jsx";
 
 const About = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
@@ -45,6 +46,18 @@ const About = () => {
     <>
       <section id='about'></section>
       <div className='bg-gray-950 min-h-screen w-full overflow-hidden'>
+          <div className="absolute z-0 h-full w-full opacity-20 md:opacity-50">
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 200}
+            particleSpread={10}
+            speed={0.15}
+            particleBaseSize={100}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
         {/* Title Section - Made responsive */}
         <div 
           className='text-4xl sm:text-5xl md:text-6xl text-center py-6 md:py-8 relative px-4'

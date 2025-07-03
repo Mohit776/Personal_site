@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import("tailwindcss").Config;
 import FlowingMenu from "../assets/FlowingMenu";
 
+import Particles from "../assets/Particales.jsx";
 
 const skillCategories = [
   {
@@ -74,6 +75,18 @@ const Skills = () => {
       id="skills"
       className="min-h-screen bg-gray-950 pb-20 px-4 sm:px-6 lg:px-8"
     >
+      <div className="absolute z-0 h-full w-[90%] opacity-5 md:opacity-50">
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 200}
+            particleSpread={10}
+            speed={0.15}
+            particleBaseSize={100}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

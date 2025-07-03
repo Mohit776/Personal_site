@@ -80,7 +80,8 @@ const Hero = () => {
             />
 
             {/* Orb - Adjusted size for mobile */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 w-[120%] h-[120%] sm:w-[130%] sm:h-[130%] lg:w-[140%] lg:h-[140%]">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 
+            w-[140%] h-[140%] sm:w-[130%] sm:h-[130%] lg:w-[140%] lg:h-[140%]">
               <Orb
                 hoverIntensity={0.5}
                 rotateOnHover={true}

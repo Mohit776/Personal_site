@@ -4,7 +4,7 @@ import github2 from '../assets/logos/github2.png'
 import airbnb from '../assets/logos/airbnb.jpg'
 import sp from '../assets/logos/sp.png'
 import fs from '../assets/logos/fs.png'
-
+import Particles from "../assets/Particales.jsx";
 const Project = () => {
   const projects = [
     {
@@ -38,6 +38,18 @@ const Project = () => {
 
     <section id="projects">
     <div className='min-h-screen bg-gray-950 pb-20'>
+      <div className="absolute z-0 h-full w-full opacity-20 md:opacity-50">
+                <Particles
+                  particleColors={["#ffffff", "#ffffff"]}
+                  particleCount={typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 200}
+                  particleSpread={10}
+                  speed={0.15}
+                  particleBaseSize={100}
+                  moveParticlesOnHover={false}
+                  alphaParticles={false}
+                  disableRotation={false}
+                />
+              </div>
       <div>
          <div 
           className='text-6xl text-center py-8 relative'
