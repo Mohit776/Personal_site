@@ -49,7 +49,7 @@ const Footer = () => {
                 <span>{contactInfo.email}</span>
                 <button 
                   onClick={() => copyToClipboard(contactInfo.email, 'email')}
-                  className="ml-2 p-1 rounded hover:bg-gray-700 transition-colors"
+                  className="ml-2 p-1 rounded hover:bg-gray-700 transition-colors cursor-pointer"
                   aria-label="Copy email"
                 >
                   <FaCopy className="text-sm" />
@@ -61,7 +61,7 @@ const Footer = () => {
                 <span>{contactInfo.phone}</span>
                 <button 
                   onClick={() => copyToClipboard(contactInfo.phone, 'phone')}
-                  className="ml-2 p-1 rounded hover:bg-gray-700 transition-colors"
+                  className="ml-2 p-1 rounded hover:bg-gray-700 transition-colors cursor-pointer"
                   aria-label="Copy phone number"
                 >
                   <FaCopy className="text-sm" />
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
             <button
               onClick={downloadResume}
-              className="flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors"
+              className="flex cursor-pointer items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors"
             >
               <FaFileDownload />
               <span>Download Resume</span>
