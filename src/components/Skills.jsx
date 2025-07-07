@@ -170,7 +170,7 @@ const Skills = () => {
         </div>
 
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center mb-8 text-white">
+          <h3 className="text-2xl font-bold text-center mb-8 text-white underline decoration-amber-600 underline-offset-4">
             Additional Tools & Technologies
           </h3>
           <motion.div
@@ -187,13 +187,15 @@ const Skills = () => {
               "Figma",
               "Versel",
               "Next.js"
-              
-             
             ].map((tool) => (
               <motion.div
                 key={tool}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="px-4 py-2 bg-gray-800 text-white cursor-pointer rounded-full text-sm font-medium hover:bg-gray-700 transition-all "
+                className="other bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-300"
+                style={{
+                  boxShadow: "0 4px 24px 0px #ff6ec4, 0 2px 8px 0px #22d3ee"
+                  // You can adjust the colors and spread for your preferred gradient effect
+                }}
               >
                 {tool}
               </motion.div>
