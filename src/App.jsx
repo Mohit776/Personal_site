@@ -4,12 +4,12 @@ import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Project from "./components/Project";
-
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <div className="bg-black min-h-screen font-sans">
       <Navbar />
-      <main>
+      <main> <Analytics />
         <Hero id="home" />
         <About id="about" />
         <Skills id="skills" />
