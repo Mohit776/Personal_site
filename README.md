@@ -36,9 +36,9 @@ Follow these steps to run the project locally:
 git clone https://github.com/Mohit776/Personal_site.git
 cd portfolio
 npm install
-npm run build```
+npm run build
 
 
-### 🙌 Credits
-### Made with ❤️ by Mohit
+🙌 Credits
+ Made with ❤️ by Mohit
 
