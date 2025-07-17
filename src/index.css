@@ -18,3 +18,9 @@
     animation: glow 20s linear infinite;
   }
 }
+
+html,
+body {
+  height: auto;
+  overflow: auto;
+}
