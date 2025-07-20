@@ -13,7 +13,7 @@ const Project = () => {
       image: airbnb, // Add your project images
       tech: ["Node.js", "MongoDB","TailwindCSS","ExpressJS"],
       github: "https://github.com/Mohit776/Airbnb_Clone",
-      live: "https://project1-demo.com"
+      live: "https://airbnb551.onrender.com/"
     },
     {
       title: "Spotify clone",
