@@ -5,29 +5,32 @@ import BlurText from "../assets/BlurText.jsx";
 import Orb from "../assets/Orb.jsx";
 import Particles from "../assets/Particales.jsx";
 import GradientText from "../assets/GradientText.jsx";
-
+import Galaxy from '../assets/Galaxy.jsx';
 const Hero = () => {
   return (
     <section id="home">
       <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden pt-8 px-4 sm:px-8 md:px-12 lg:px-28">
         {/* Particles Background - Adjusted for mobile */}
         <div className="absolute z-0 h-[84%] w-full opacity-30 md:opacity-50">
-          <Particles
-            particleColors={["#ffffff", "#ffffff"]}
-            particleCount={typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 200}
-            particleSpread={10}
-            speed={0.15}
-            particleBaseSize={100}
-            moveParticlesOnHover={false}
-            alphaParticles={false}
-            disableRotation={false}
-          />
+       <div style={{ pointerEvents: 'auto', width: '100%', height: '600px', position: 'relative' }}>
+  <Galaxy 
+    mouseRepulsion={false}
+    mouseInteraction={false}
+    density={1}
+    glowIntensity={0.4}
+    saturation={0}
+    hueShift={140}
+    twinkleIntensity={0.5}
+    twinkleSpeed={0.5}
+  />
+</div>
         </div>
 
         {/* Main Content Section - Improved responsive layout */}
-        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[90vh] md:min-h-screen">
+        
+       <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center min-h-[90vh] md:min-h-screen">
           {/* Text Content - Adjusted padding and margins for mobile */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left pt-12 lg:pt-0 px-4 sm:px-8 md:mx-12">
+           <div className="w-full lg:w-1/2 text-center lg:text-left pt-12 lg:pt-0 px-4 sm:px-8 md:mx-12">
             {/* Animated Text */}
             <div className="text-white">
               <TrueFocus
@@ -68,7 +71,7 @@ const Hero = () => {
                 Web Developer
               </GradientText>
             </div>
-          </div>
+          </div> 
 
           {/* Orb and Profile Image - Adjusted sizes for mobile */}
           <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] mt-8 lg:mt-0">
@@ -90,7 +93,7 @@ const Hero = () => {
               />
             </div>
           </div>
-        </div>
+       </div> 
       </div>
     </section>
   );

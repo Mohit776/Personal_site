@@ -7,7 +7,6 @@ import fs from '../assets/logos/fs.png'
 import Particles from "../assets/Particales.jsx";
 
 
-
 const Project = () => {
   const projects = [
     { 
