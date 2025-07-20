@@ -7,7 +7,7 @@ import fs from '../assets/logos/fs.png'
 import Particles from "../assets/Particales.jsx";
 const Project = () => {
   const projects = [
-    {
+    { 
       title: "Air BNB",
       description: "This project is my  full stack project, majorly focused on backend and tried to give responsive UI, dynamic listings, user authentication, and booking features using modern web development technologies.",
       image: airbnb, // Add your project images
