@@ -6,24 +6,31 @@ import Orb from "../assets/Orb.jsx";
 import Particles from "../assets/Particales.jsx";
 import GradientText from "../assets/GradientText.jsx";
 import Galaxy from '../assets/Galaxy.jsx';
+import { FaFileDownload } from "react-icons/fa";
 const Hero = () => {
+
+
+   const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = contactInfo.resumeUrl;
+    link.download = 'Mohit_Resume.Docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home">
       <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden pt-8 px-4 sm:px-8 md:px-12 lg:px-28">
         {/* Particles Background - Adjusted for mobile */}
         <div className="absolute z-0 h-[84%] w-full opacity-30 md:opacity-50">
-       <div style={{ pointerEvents: 'auto', width: '100%', height: '600px', position: 'relative' }}>
-  <Galaxy 
-    mouseRepulsion={false}
-    mouseInteraction={false}
-    density={1}
-    glowIntensity={0.4}
-    saturation={0}
-    hueShift={140}
-    twinkleIntensity={0.5}
-    twinkleSpeed={0.5}
-  />
-</div>
+          <Particles
+            className="w-full h-full"
+            particleColor="#ffffff"
+            backgroundColor="#000000"
+            particleCount={120}
+            speed={0.5}
+          />
         </div>
 
         {/* Main Content Section - Improved responsive layout */}
@@ -51,7 +58,7 @@ const Hero = () => {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   display: "inline-block",
-                  fontFamily: "Poetsen One",
+                  fontFamily: "cursive",
                 }}
               >
                 <BlurText
@@ -61,15 +68,19 @@ const Hero = () => {
                   direction="down"
                   className="text-4xl sm:text-5xl lg:text-6xl mb-4 font-bold mt-6 md:mt-8"
                 />
+                
               </div>
-              <GradientText
-                colors={["#ff6ec4", "#7873f5", "#4ade80", "#22d3ee", "#facc15"]}
-                animationSpeed={3}
-                showBorder={true}
-                className="text-xl sm:text-2xl lg:text-3xl mb-8 text-white font-semibold"
-              >
-                Web Developer
-              </GradientText>
+                <button
+              onClick={downloadResume}
+              className="flex cursor-pointer items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              <FaFileDownload/>&nbsp;
+               Download Resume
+             
+              </button>
+             
+           
+             
             </div>
           </div> 
 

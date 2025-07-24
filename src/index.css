@@ -24,3 +24,9 @@ body {
   height: auto;
   overflow: auto;
 }
+
+.scroll-stack-scroller {
+  position: relative;
+  height: auto;
+  overflow: visible;
+}

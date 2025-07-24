@@ -27,19 +27,12 @@ const About = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const timelineData = [
-    {
-      year: "B.Tech, Computer science",
-      description: "Dr. Akhilesh Das Gupta Institute of Profressional Studies, New Delhi"
-    },
-    {
-      year: "Web Developer",
-      description: "Specialized in full-stack development with expertise in React.js, Node.js, and modern web technologies."
-    },
-    {
-      year: "Software Engineer",
-      description: "Implemented responsive designs, optimized application performance."
-    },
+  const AboutData = [
+  {point :"🚀 Second-Year Computer Science Student | Passionate About Technology & Problem-Solving"},
+ {point :"Got 8.9 CGPA in First Year and excelling in my batch."},
+ {point :"Currently learning DSA in JAVA, MERN stack, and exploring AI ."},
+ {point :"Driven to create innovative solutions, contribute to impactful projects, and grow through collaboration."},
+{point :" Open to connecting with peers, mentors, and professionals to share ideas, learn, and build a meaningful career in tech."}
   ];
 
   return (
@@ -128,13 +121,13 @@ const About = () => {
 
               <div className="pt-14 sm:pt-16 p-4 sm:p-6 text-center">
                 <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
-                    style={{ fontFamily: "'Yatra One', cursive" }}>
+                    style={{ fontFamily: "cursive" }}>
                   Mohit Aggarwal
                 </h3>
                 <p className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-2">Software Engineer & Web Developer</p>
                 
                 <div className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-1 sm:gap-2">
-                  {['React', 'Node.js', 'JavaScript', 'TypeScript'].map((skill) => (
+                  {['React', 'Node.js', 'JavaScript'].map((skill) => (
                     <span 
                       key={skill}
                       className="px-2 py-1 text-xs sm:text-sm bg-gray-800/50 rounded-full text-gray-300 hover:bg-gray-700/50 transition-colors duration-300"
@@ -167,7 +160,7 @@ const About = () => {
 
           {/* Timeline - Adjusted for mobile */}
           <div className='timeline relative w-full max-w-md lg:max-w-lg mt-8 sm:mt-12 lg:mt-8 px-4 sm:px-0'>
-            {timelineData.map((item, index) => (
+            {AboutData.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
@@ -180,11 +173,11 @@ const About = () => {
                 <div className='w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-amber-400 z-10'></div>
                 <div className='ml-6 sm:ml-8'>
                   <div className='flex items-baseline'>
-                    <span className='text-amber-400 text-base sm:text-lg font-bold' style={{ fontFamily: "'Yatra One', cursive" }}>
-                      {item.year}
+                    <span className='text-amber-400 text-base sm:text-md ' style={{ fontFamily: "cursive" }}>
+                      {item.point}
                     </span>
                   </div>
-                  <p className='text-gray-300 text-sm sm:text-base mt-1 sm:mt-2'>{item.description}</p>
+                 
                 </div>
               </motion.div>
             ))}
