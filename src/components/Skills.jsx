@@ -131,8 +131,8 @@ const Skills = () => {
           {skillSections.map((section, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? 200 : -200 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? 135 : -135 , scale: 0.75 }}
+              whileInView={{ opacity: 1, x: 0 , scale: 1 }}
               transition={{ duration: 1, delay: index * 0.2 }} // Adjusted delay timing
               viewport={{ once: true }}
               className="w-full flex items-center justify-center"
@@ -145,12 +145,7 @@ const Skills = () => {
                 magnification={110} // Base magnification for mobile
                 className="sm:panelHeight-100 md:panelHeight-120" // Responsive panel height
                 spring={{ mass: 0.1, stiffness: 150, damping: 12 }}
-                // Responsive sizes based on screen width
-                // {...(typeof window !== 'undefined' && {
-                //   panelHeight: window.innerWidth < 640 ? 80 : window.innerWidth < 768 ? 100 : 120,
-                //   baseItemSize: window.innerWidth < 640 ? 60 : window.innerWidth < 768 ? 80 : 100,
-                //   magnification: window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 115 : 130,
-                // })}
+              
               />
           
             </motion.div>

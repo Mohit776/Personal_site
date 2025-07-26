@@ -7,6 +7,8 @@ import Particles from "../assets/Particales.jsx";
 import GradientText from "../assets/GradientText.jsx";
 import Galaxy from '../assets/Galaxy.jsx';
 import { FaFileDownload } from "react-icons/fa";
+import {motion} from "framer-motion";
+
 const Hero = () => {
 
 
@@ -85,7 +87,12 @@ const Hero = () => {
           </div> 
 
           {/* Orb and Profile Image - Adjusted sizes for mobile */}
-          <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] mt-8 lg:mt-0">
+          <motion.div 
+          className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] mt-8 lg:mt-0"
+          initial={{ opacity: 0, scale: 0.75 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          >
             {/* Profile Image */}
             <img
               src={ProfilePhoto}
@@ -103,7 +110,7 @@ const Hero = () => {
                 forceHoverState={false}
               />
             </div>
-          </div>
+          </motion.div>
        </div> 
       </div>
     </section>
