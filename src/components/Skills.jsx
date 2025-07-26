@@ -98,10 +98,10 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16" // Added responsive margin
         >
           <div
-            className='text-6xl text-center py-8 relative'
+            className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center py-4 sm:py-8 relative' // Made text size responsive
             style={{
               fontFamily: "'Yatra One', cursive",
               background: "linear-gradient(45deg, #FF6EC4, #7873F5, #4ADE80, #22D3EE, #FACC15)",
@@ -113,7 +113,7 @@ const Skills = () => {
           >
             Skills
             <div
-              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 h-1 w-48"
+              className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 h-0.5 sm:h-1 w-24 sm:w-48" // Made underline responsive
               style={{
                 background: "linear-gradient(45deg, #FF6EC4, #7873F5, #4ADE80, #22D3EE, #FACC15)",
                 backgroundSize: "200% auto",
@@ -122,92 +122,40 @@ const Skills = () => {
             />
           </div>
 
-          <style jsx>{`
-          @keyframes gradient {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
-          }
-        `}</style>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Technologies and tools I work with to create amazing digital
-            experiences
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto px-4"> 
+            Technologies and tools I work with to create amazing digital experiences
           </p>
-         
         </motion.div>
 
-        <div className=" flex flex-col items-center justify-center mb-18 gap-5 ">
+        <div className="flex flex-col items-center justify-center gap-3 sm:gap-5 px-2 sm:px-4"> // Added responsive padding and gap
+          {skillSections.map((section, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? 200 : -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: index * 0.2 }} // Adjusted delay timing
+              viewport={{ once: true }}
+              className="w-full flex items-center justify-center"
+            >
         
-
-
-          <motion.div
-            initial={{ opacity: 0, x: 200 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration:  1  , delay: skillSections[0].index * 0.5 }}
-            viewport={{ once: true }}
-      
-          >
-       
-            <Dock
-              items={frontend}
-              panelHeight={120}
-              baseItemSize={100}
-              magnification={130}
-            />
-          </motion.div> 
-          <motion.div
-            initial={{ opacity: 0, x: -300 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 , delay: skillSections[0].index * 0.5 }}
-            viewport={{ once: true }}
-          >
-            <Dock
-              items={backend}
-              panelHeight={120}
-              baseItemSize={100}
-              magnification={130}
-            />
-
-
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 400 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 , delay: skillSections[0].index * 0.5  }}
-            viewport={{ once: true }}
-
-
-          >
-            <Dock
-              items={programing}
-              panelHeight={120}
-              baseItemSize={100}
-              magnification={130}
-            />
-
-
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: -500 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 , delay: skillSections[0].index * 0.5  }}
-            viewport={{ once: true }}
-
-          >
-            <Dock
-              items={otherTech}
-              panelHeight={120}
-              baseItemSize={100}
-              magnification={130}
-            />
-
-
-          </motion.div>
-
-
-
-
+              <Dock
+                items={section.items}
+                panelHeight={90} // Base height for mobile
+                baseItemSize={70} // Base size for mobile
+                magnification={110} // Base magnification for mobile
+                className="sm:panelHeight-100 md:panelHeight-120" // Responsive panel height
+                spring={{ mass: 0.1, stiffness: 150, damping: 12 }}
+                // Responsive sizes based on screen width
+                {...(typeof window !== 'undefined' && {
+                  panelHeight: window.innerWidth < 640 ? 80 : window.innerWidth < 768 ? 100 : 120,
+                  baseItemSize: window.innerWidth < 640 ? 60 : window.innerWidth < 768 ? 80 : 100,
+                  magnification: window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 115 : 130,
+                })}
+              />
+          
+            </motion.div>
+          ))}
         </div>
-
       </div>
     </section>
   );
