@@ -140,17 +140,17 @@ const Skills = () => {
         
               <Dock
                 items={section.items}
-                panelHeight={90} // Base height for mobile
-                baseItemSize={70} // Base size for mobile
+                panelHeight={95} // Base height for mobile
+                baseItemSize={75} // Base size for mobile
                 magnification={110} // Base magnification for mobile
                 className="sm:panelHeight-100 md:panelHeight-120" // Responsive panel height
                 spring={{ mass: 0.1, stiffness: 150, damping: 12 }}
                 // Responsive sizes based on screen width
-                {...(typeof window !== 'undefined' && {
-                  panelHeight: window.innerWidth < 640 ? 80 : window.innerWidth < 768 ? 100 : 120,
-                  baseItemSize: window.innerWidth < 640 ? 60 : window.innerWidth < 768 ? 80 : 100,
-                  magnification: window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 115 : 130,
-                })}
+                // {...(typeof window !== 'undefined' && {
+                //   panelHeight: window.innerWidth < 640 ? 80 : window.innerWidth < 768 ? 100 : 120,
+                //   baseItemSize: window.innerWidth < 640 ? 60 : window.innerWidth < 768 ? 80 : 100,
+                //   magnification: window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 115 : 130,
+                // })}
               />
           
             </motion.div>
