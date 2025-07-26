@@ -1,22 +1,29 @@
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import About from "./components/About";
-import Project from "./components/Project";
-import { Analytics } from '@vercel/analytics/react';
+import { RouterProvider , createBrowserRouter } from "react-router";
+import Projectpage from "./components/Projectpage";
+import Home from "./pages/Home";
+
+
+
 function App() {
+
+  const route  = createBrowserRouter([
+    {
+      path: "/projects",
+      element: <Projectpage/>,
+    },
+     {
+      path: "/",
+      element: <Home/>,
+    }
+  ])
+
   return (
-    <div className="bg-black min-h-screen font-sans">
-      <Navbar />
-      <main> <Analytics />
-        <Hero id="home" />
-        <About id="about" />
-        <Skills id="skills" />
-        <Project id="Project" />
-      </main>
-      <Footer />
-    </div>
+   
+    <>
+    <RouterProvider router={route} />
+    
+    
+    </>
   );
 }
 

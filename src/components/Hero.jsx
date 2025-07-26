@@ -1,11 +1,10 @@
-import React from "react";
+
 import ProfilePhoto from "../assets/Photo.png";
 import TrueFocus from "../assets/Truefocus.jsx";
 import BlurText from "../assets/BlurText.jsx";
 import Orb from "../assets/Orb.jsx";
 import Particles from "../assets/Particales.jsx";
-import GradientText from "../assets/GradientText.jsx";
-import Galaxy from '../assets/Galaxy.jsx';
+
 import { FaFileDownload } from "react-icons/fa";
 import {motion} from "framer-motion";
 
@@ -68,13 +67,13 @@ const Hero = () => {
                   delay={250}
                   animateBy="words"
                   direction="down"
-                  className="text-4xl sm:text-5xl lg:text-6xl mb-4 font-bold mt-6 md:mt-8"
+                  className="text-4xl sm:text-5xl lg:text-6xl mb-4 font-bold mt-6 md:mt-8 cursor-pointer"
                 />
                 
               </div>
                 <button
               onClick={downloadResume}
-              className="flex cursor-pointer items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors md:p-0"
+              className="flex cursor-pointer items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
             >
               <FaFileDownload/>&nbsp;
                Download Resume

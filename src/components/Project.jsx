@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import github2 from '../assets/logos/github2.png'
 import airbnb from '../assets/logos/airbnb.jpg'
