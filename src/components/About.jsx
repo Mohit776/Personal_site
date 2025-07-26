@@ -30,7 +30,7 @@ const About = () => {
   const AboutData = [
   {point :"🚀 Second-Year Computer Science Student | Passionate About Technology & Problem-Solving"},
  {point :"Got 8.9 CGPA in First Year and excelling in my batch."},
- {point :"Currently learning DSA in JAVA, MERN stack, and exploring AI ."},
+ {point :"Currently learning DSA in C++, MERN stack, and exploring AI ."},
  {point :"Driven to create innovative solutions, contribute to impactful projects, and grow through collaboration."},
 {point :" Open to connecting with peers, mentors, and professionals to share ideas, learn, and build a meaningful career in tech."}
   ];
@@ -159,13 +159,14 @@ const About = () => {
           </div>
 
           {/* Timeline - Adjusted for mobile */}
+          
           <div className='timeline relative w-full max-w-md lg:max-w-lg mt-8 sm:mt-12 lg:mt-8 px-4 sm:px-0'>
             {AboutData.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.25 }}
                 viewport={{ once: true }}
                 className='flex mb-6 sm:mb-8 relative'
               >

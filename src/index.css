@@ -25,6 +25,9 @@ body {
   overflow: auto;
 }
 
+.cursive {
+  font-family: "Cursive";
+}
 .scroll-stack-scroller {
   position: relative;
   height: auto;

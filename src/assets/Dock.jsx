@@ -92,7 +92,8 @@ function DockLabel({ children, className = "", ...rest }) {
           animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
-          className={`dock-label ${className}`}
+          style={{fontFamily : "cursive"}}
+          className={`dock-label ${className} text-xs sm:text-sm md:text-base lg:text-lg `}
           role="tooltip"
         >
           {children}

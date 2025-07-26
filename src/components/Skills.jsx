@@ -142,7 +142,7 @@ const Skills = () => {
           <motion.div
             initial={{ opacity: 0, x: 200 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: skillSections[0].index * 0.5 + 1 }}
+            transition={{ duration:  1  , delay: skillSections[0].index * 0.5 }}
             viewport={{ once: true }}
       
           >
@@ -157,7 +157,7 @@ const Skills = () => {
           <motion.div
             initial={{ opacity: 0, x: -300 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: skillSections[1].index * 0.5 + 1  }}
+            transition={{ duration: 1 , delay: skillSections[0].index * 0.5 }}
             viewport={{ once: true }}
           >
             <Dock
@@ -172,7 +172,7 @@ const Skills = () => {
           <motion.div
             initial={{ opacity: 0, x: 400 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: skillSections[2].index * 0.5 + 1  }}
+            transition={{ duration: 1 , delay: skillSections[0].index * 0.5  }}
             viewport={{ once: true }}
 
 
@@ -189,7 +189,7 @@ const Skills = () => {
           <motion.div
             initial={{ opacity: 0, x: -500 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: skillSections[3].index * 0.3 + 1  }}
+            transition={{ duration: 1 , delay: skillSections[0].index * 0.5  }}
             viewport={{ once: true }}
 
           >
