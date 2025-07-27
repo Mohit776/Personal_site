@@ -1,5 +1,5 @@
 import { RouterProvider , createBrowserRouter } from "react-router";
-import Projectpage from "./components/Projectpage";
+import Projectpage from "./pages/Projectpage";
 import Home from "./pages/Home";
 
 
