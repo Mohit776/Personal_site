@@ -108,7 +108,7 @@ const BlurText = ({
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               display: 'inline-block',
-              fontFamily: 'cursive',
+              fontFamily: ' Baloo ,cursive ,sans-serif ',
               fontSize: 'clamp(3rem, 6vw, 4rem)',
             }}
           >

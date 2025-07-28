@@ -50,25 +50,25 @@ const skillSections = [
   {
     title: "Frontend Development",
     items: frontend,
-    index: 0
+   
   
   },
   {
     title: "Backend Development",
     items: backend,
-    index: 1
+
    
   },
   {
     title: "Programming Languages",
     items: programing,
-    index: 2
+
    
   },
   {
     title: "Tools & Technologies",
     items: otherTech,
-    index: 3
+    
   
   }
 ];
