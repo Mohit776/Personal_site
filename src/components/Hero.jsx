@@ -73,7 +73,7 @@ const Hero = () => {
               </div>
                 <button
               onClick={downloadResume}
-              className="flex cursor-pointer items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
+              className="flex cursor-pointer  items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
             >
               <FaFileDownload/>&nbsp;
                Download Resume
