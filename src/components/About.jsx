@@ -55,7 +55,7 @@ const About = () => {
         <div 
           className='text-4xl sm:text-5xl md:text-6xl text-center py-6 md:py-8 relative px-4'
           style={{ 
-            fontFamily: "'Yatra One', cursive",
+            fontFamily: "'Yatra One'",
             background: "linear-gradient(45deg, #FF6EC4, #7873F5, #4ADE80, #22D3EE, #FACC15)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",

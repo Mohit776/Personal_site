@@ -10,7 +10,9 @@ import {motion} from "framer-motion";
 
 const Hero = () => {
 
-
+const contactInfo = {
+  resumeUrl: "/resume/Mohit_Resume.docx" // or your actual public path
+};
    const downloadResume = () => {
     const link = document.createElement('a');
     link.href = contactInfo.resumeUrl;
@@ -40,7 +42,7 @@ const Hero = () => {
           {/* Text Content - Adjusted padding and margins for mobile */}
            <div className="w-full lg:w-1/2 text-center lg:text-left pt-12 lg:pt-0 px-4 sm:px-8 md:mx-12">
             {/* Animated Text */}
-            <div className="text-white">
+            <div className="text-white h-12 md:h-20 ">
               <TrueFocus
                 sentence="Hi, I'm"
                 manualMode={false}
@@ -67,7 +69,7 @@ const Hero = () => {
                   delay={250}
                   animateBy="words"
                   direction="down"
-                  className="text-4xl sm:text-5xl lg:text-6xl mb-4 font-bold mt-6 md:mt-8 cursor-pointer"
+                  className="text- sm:text-xl lg:text-6xl mb-4 font-bold mt-6 md:mt-8 cursor-pointer"
                 />
                 
               </div>

@@ -26,7 +26,7 @@ body {
 }
 
 .cursive {
-  font-family: "Cursive";
+  font-family: "Cursive"  ,"Martel Sans", sans-serif;
 }
 .scroll-stack-scroller {
   position: relative;

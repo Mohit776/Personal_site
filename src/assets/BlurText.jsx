@@ -104,10 +104,12 @@ const BlurText = ({
             }
             style={{
               background:
-                'linear-gradient(to right, #40ffaa, #4079ff)',
+          'linear-gradient(to right, #40ffaa, #4079ff)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               display: 'inline-block',
+              fontFamily: 'cursive',
+              fontSize: 'clamp(3rem, 6vw, 4rem)',
             }}
           >
             {segment === ' ' ? '\u00A0' : segment}

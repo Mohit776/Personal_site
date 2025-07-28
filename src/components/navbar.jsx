@@ -1,149 +1,56 @@
+import { motion } from "framer-motion";
+import React from "react";
+import { FaHome, FaProjectDiagram, FaUserAlt, FaEnvelope ,FaFileDownload } from "react-icons/fa";
 
-import { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link as ScrollLink } from 'react-scroll';
-
-const Navbar = ({ 
-  logoText = { first: "My", second: "Portfolio" },
-  logoColor = "purple-400",
-  navLinks = [
-    { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Contact', to: 'contact' },
-  ],
-  ctaButton = { text: "Contact", to: "contact" }
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('home');
-
-  // Update the scroll effect to include more properties
-  useEffect(() => {
-    const handleScroll = () => {
-      try {
-        const scrollY = window.scrollY;
-        const threshold = 10;
-        const opacity = Math.min(scrollY / 100, 0.8);
-        const header = document.querySelector('header');
-        
-        if (!header) return;
-        
-        if (scrollY > threshold) {
-          setScrolled(true);
-          header.style.setProperty('--scroll-opacity', opacity.toString());
-        } else {
-          setScrolled(false);
-          header.style.setProperty('--scroll-opacity', '0');
-        }
-      } catch (error) {
-        console.error('Error handling scroll:', error);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleSetActive = (to) => {
-    setActiveLink(to);
-  };
-
-  return (
-    <header 
-      className={`
-        fixed w-full z-50 transition-all duration-300 
-        ${scrolled 
-          ? 'bg-gray-900/[var(--scroll-opacity)] backdrop-blur-[8px] border-b border-white/10 shadow-lg' 
-          : 'bg-transparent'
-        } 
-        text-white
-      `}
-      style={{ 
-        '--scroll-opacity': 0,
-        backdropFilter: scrolled ? 'blur(8px)' : 'none',
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <ScrollLink 
-              to="home" 
-              smooth={true} 
-              duration={500} 
-              className="text-xl font-bold cursor-pointer flex items-center"
-              onSetActive={() => handleSetActive('home')}
-            >
-              <span className={`text-${logoColor}`}>{logoText.first}</span>
-              <span className="ml-1">{logoText.second}</span>
-            </ScrollLink>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <ScrollLink
-                key={link.name}
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className={`px-3 py-2  rounded-md text-lg font-medium transition-colors cursor-pointer hover:text-${logoColor} ${
-                  activeLink === link.to ? `text-${logoColor} font-semibold` : 'text-gray-300'
-                }`}
-                onSetActive={() => handleSetActive(link.to)}
-                spy={true}
-              >
-                {link.name}
-              </ScrollLink>
-            ))}
-
-            {/* CTA Button */}
-            
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-full focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-gray-800 transition-all duration-300 ease-in-out`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {navLinks.map((link) => (
-            <ScrollLink
-              key={link.name}
-              to={link.to}
-              smooth={true}
-              duration={500}
-              offset={-80}
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
-                activeLink === link.to ? `text-${logoColor} font-semibold` : 'text-gray-300'
-              } hover:bg-gray-700 cursor-pointer`}
-              onSetActive={() => handleSetActive(link.to)}
-              spy={true}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </ScrollLink>
-          ))}
-
-      
-         
-        </div>
-      </div>
-    </header>
-  );
+const contactInfo = {
+  resumeUrl: "/resume/Mohit_Resume.docx" // or your actual public path
 };
+
+const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = contactInfo.resumeUrl;
+    link.download = 'Mohit_Resume.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+const navLinks = [
+  { name: "Home", href: "/", icon: <FaHome /> },
+  { name: "Projects", href: "/projects", icon: <FaProjectDiagram /> },
+
+
+];
+
+const Navbar = () => (
+  
+  
+  <motion.nav
+   initial={{ opacity: 0, y: -20 ,scale: 0.8 }}
+ animate={{ opacity: 1, y: 0 ,scale: 1 }}   
+ transition={{ duration: 1 }}
+  className="absolute top-9 left-1/2 z-50 -translate-x-1/2 w-[82%] rounded-2xl bg-gradient-to-br from-white/20 via-purple-400/10 to-blue-400/10 backdrop-blur-xl border border-purple-400/30 shadow-xl shadow-purple-500/10 px-4 py-2 flex justify-between items-center">
+    <div className="text-xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 select-none" style={{ fontFamily: "Orbitron, monospace" }}>
+      MOHIT AGGARWAL
+    </div>
+    <ul className="flex gap-2 sm:gap-4 md:gap-6">
+      {navLinks.map((link) => (
+        <li key={link.name}>
+          <a
+            href={link.href}
+            className="flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-white/80 hover:text-cyan-300 hover:bg-white/10 hover:backdrop-blur-lg border border-transparent hover:border-cyan-400/30"
+            style={{ fontFamily: "Orbitron, monospace", letterSpacing: "0.05em" }}
+          >
+            <span className="text-lg">{link.icon}</span>
+            <span className="hidden sm:inline">{link.name}</span>
+          </a>
+        </li>
+      ))}
+      <button onClick={downloadResume} className="flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-white/80 hover:text-cyan-300 hover:bg-white/10 hover:backdrop-blur-lg border border-transparent hover:border-cyan-400/30">
+      
+      <FaFileDownload/>    <span className="hidden sm:inline">Resume</span></button>
+    </ul>
+  </motion.nav>
+
+);
 
 export default Navbar;
