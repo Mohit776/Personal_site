@@ -1,27 +1,23 @@
-import { RouterProvider , createBrowserRouter } from "react-router";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Projectpage from "./pages/Projectpage";
 import Home from "./pages/Home";
-
-
+import Footer from "./components/footer";
 
 function App() {
-
-  const route  = createBrowserRouter([
+  const route = createBrowserRouter([
     {
       path: "/projects",
-      element: <Projectpage/>,
+      element: <Projectpage />,
     },
-     {
+    {
       path: "/",
-      element: <Home/>,
+      element: <Home />,
     }
-  ])
+  ]);
 
   return (
-   
     <>
-    <RouterProvider router={route} />
-    
+      <RouterProvider router={route} />
     
     </>
   );

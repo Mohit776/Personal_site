@@ -26,15 +26,15 @@ const contactInfo = {
     <section id="home">
       <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden pt-8 px-4 sm:px-8 md:px-12 lg:px-28">
         {/* Particles Background - Adjusted for mobile */}
-        <div className="absolute z-0 h-[84%] w-full opacity-30 md:opacity-50">
-          <Particles
-            className="w-full h-full"
-            particleColor="#ffffff"
-            backgroundColor="#000000"
-            particleCount={120}
-            speed={0.5}
-          />
-        </div>
+     <div className="absolute inset-0 z-0">
+  <Particles
+    className="w-full h-full"
+    particleColor="#ffffff"
+    backgroundColor="#000000"
+    particleCount={150}
+    speed={0.4}
+  />
+</div>
 
         {/* Main Content Section - Improved responsive layout */}
         
@@ -61,7 +61,7 @@ const contactInfo = {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   display: "inline-block",
-                  fontFamily: "cursive",
+                  fontFamily: "Baloo Bhaijaan 2",
                 }}
               >
                 <BlurText
@@ -75,7 +75,8 @@ const contactInfo = {
               </div>
                 <button
               onClick={downloadResume}
-              className="flex cursor-pointer  items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
+              style={{fontFamily: "Winky Rough, sans-serif"}}
+              className="flex cursor-pointer   items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
             >
               <FaFileDownload/>&nbsp;
                Download Resume

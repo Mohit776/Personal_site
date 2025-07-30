@@ -121,7 +121,7 @@ const About = () => {
 
               <div className="pt-14 sm:pt-16 p-4 sm:p-6 text-center">
                 <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
-                    style={{ fontFamily: "cursive" }}>
+                  style={{ fontFamily: "Winky Rough, cursive" }}>
                   Mohit Aggarwal
                 </h3>
                 <p className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-2">Software Engineer & Web Developer</p>
@@ -174,7 +174,7 @@ const About = () => {
                 <div className='w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-amber-400 z-10'></div>
                 <div className='ml-6 sm:ml-8'>
                   <div className='flex items-baseline'>
-                    <span className='text-amber-400 text-base sm:text-md ' style={{ fontFamily: " baloo , cursive ,sans-serif" }}>
+                    <span className='text-amber-400 text-base sm:text-md  ' style={{ fontFamily: "Winky Rough, sans-serif" }}>
                       {item.point}
                     </span>
                   </div>
