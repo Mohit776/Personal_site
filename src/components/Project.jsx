@@ -4,6 +4,7 @@ import airbnb from '../assets/logos/airbnb.jpg'
 import sp from '../assets/logos/sp.png'
 import fs from '../assets/logos/fs.png'
 import Particles from "../assets/Particales.jsx";
+import { Link } from 'react-router';
 
 
 const Project = () => {
@@ -82,7 +83,7 @@ const Project = () => {
         `}</style></div>
 
 
-        <div className='container mx-auto px-4 mt-16'>
+        <div className='container  mx-auto px-4 mt-16'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projects.map((project, index) => (
             <motion.div
@@ -146,6 +147,14 @@ const Project = () => {
             </motion.div>
           ))}
         </div>
+<div className='text-center w-full mt-8'>
+        <button>
+          <Link to="/projects" className='cursor-pointer z-50 absolute my-8 inline-block px-6 py-3  bg-gradient-to-r  from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors duration-300'>
+            View All Projects </Link>
+        </button>
+
+        </div>
+        
       </div>
     </div></section>
   );
