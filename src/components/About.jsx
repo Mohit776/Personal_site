@@ -121,7 +121,7 @@ const About = () => {
 
               <div className="pt-14 sm:pt-16 p-4 sm:p-6 text-center">
                 <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
-                  style={{ fontFamily: "Winky Rough, cursive" }}>
+                  style={{ fontFamily: "Delius, cursive" }}>
                   Mohit Aggarwal
                 </h3>
                 <p className="text-gray-400 text-sm sm:text-base mt-1 sm:mt-2">Software Engineer & Web Developer</p>

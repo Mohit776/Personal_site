@@ -77,7 +77,7 @@ const Hero = () => {
               </div>
               <button
                 onClick={downloadResume}
-                style={{ fontFamily: "Winky Rough, sans-serif" }}
+                style={{ fontFamily: "Yatra One, sans-serif" }}
                 className="flex cursor-pointer   items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
               >
                 <FaFileDownload />&nbsp;
