@@ -174,7 +174,7 @@ const About = () => {
                 <div className='w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-amber-400 z-10'></div>
                 <div className='ml-6 sm:ml-8'>
                   <div className='flex items-baseline'>
-                    <span className='text-amber-400 text-base sm:text-md  ' style={{ fontFamily: "Winky Rough, sans-serif" }}>
+                    <span className='text-amber-400 text-base sm:text-md  ' style={{ fontFamily: "Delius, sans-serif" }}>
                       {item.point}
                     </span>
                   </div>

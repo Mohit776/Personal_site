@@ -1,26 +1,15 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Projectpage from "./pages/Projectpage";
 import Home from "./pages/Home";
-import Footer from "./components/footer";
+import lenis from "./Lenis.js"; // make sure path is correct
 
 function App() {
   const route = createBrowserRouter([
-    {
-      path: "/projects",
-      element: <Projectpage />,
-    },
-    {
-      path: "/",
-      element: <Home />,
-    }
+    { path: "/projects", element: <Projectpage /> },
+    { path: "/", element: <Home /> },
   ]);
 
-  return (
-    <>
-      <RouterProvider router={route} />
-    
-    </>
-  );
+  return <RouterProvider router={route} />;
 }
 
 export default App;
