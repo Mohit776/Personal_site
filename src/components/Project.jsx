@@ -146,6 +146,7 @@ const Project = () => {
               </div>
             </motion.div>
           ))}
+          
         </div>
 <div className='text-center w-full mt-8'>
         <button>
