@@ -45,9 +45,9 @@ const Navbar = () => (
           </a>
         </li>
       ))}
-      <button onClick={downloadResume} className="flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-white/80 hover:text-cyan-300 hover:bg-white/10 hover:backdrop-blur-lg border border-transparent hover:border-cyan-400/30">
+      <a href="/resume/Mohit_Resume.pdf" className="flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-white/80 hover:text-cyan-300 hover:bg-white/10 hover:backdrop-blur-lg border border-transparent hover:border-cyan-400/30">
       
-      <FaFileDownload/>    <span className="hidden sm:inline">Resume</span></button>
+      <FaFileDownload/>    <span className="hidden sm:inline">Resume</span></a>
     </ul>
   </motion.nav>
 

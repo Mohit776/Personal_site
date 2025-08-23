@@ -9,7 +9,7 @@ const Footer = () => {
   const contactInfo = {
     email: 'mohitaggarwal551@gmail.com',
     phone: '+91 9205394233',
-    resumeUrl: '/resume/Mohit_Resume.docx'
+    resumeUrl: '/resume/Mohit_Resume.pdf'
   };
 
   const socialLinks = [
@@ -28,7 +28,7 @@ const Footer = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = contactInfo.resumeUrl;
-    link.download = 'Mohit_Resume.Docx';
+    link.download = 'Mohit_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

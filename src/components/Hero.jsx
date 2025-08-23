@@ -1,27 +1,16 @@
 
 import ProfilePhoto from "../assets/Photo.png";
 import TrueFocus from "../assets/Truefocus.jsx";
-
 import Orb from "../assets/Orb.jsx";
 import Particles from "../assets/Particales.jsx";
 import TextType from "../assets/Type.jsx";
-
 import { FaFileDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+
 const Hero = () => {
 
-  const contactInfo = {
-    resumeUrl: "/resume/Mohit_Resume.docx" // or your actual public path
-  };
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = contactInfo.resumeUrl;
-    link.download = 'Mohit_Resume.Docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   return (
     <section id="home">
@@ -75,15 +64,15 @@ const Hero = () => {
                 />
 
               </div>
-              <button
-                onClick={downloadResume}
+              <a
+                href = "/resume/Mohit_Resume.pdf"
                 style={{ fontFamily: "Yatra One, sans-serif" }}
-                className="flex cursor-pointer   items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
+                className="flex cursor-pointer w-[20%]  items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
               >
                 <FaFileDownload />&nbsp;
                 Resume
 
-              </button>
+              </a>
 
 
 
