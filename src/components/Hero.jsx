@@ -67,14 +67,12 @@ const Hero = () => {
               <a
                 href = "/resume/Mohit_Resume.pdf"
                 style={{ fontFamily: "Yatra One, sans-serif" }}
-                className="flex cursor-pointer w-[20%]  items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded-md transition-colors "
+                className="flex cursor-pointer w-[30%] h-8 justify-center items-center space-x-2 bg-purple-600 hover:bg-purple-900 text-white px-2  rounded-md transition-colors "
               >
-                <FaFileDownload />&nbsp;
-                Resume
+                <FaFileDownload />&nbsp;&nbsp;
+             <span> Resume</span>
 
               </a>
-
-
 
             </div>
           </div>

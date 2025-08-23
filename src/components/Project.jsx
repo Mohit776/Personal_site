@@ -149,7 +149,7 @@ const Project = () => {
         </div>
 <div className='text-center w-full mt-8'>
         <button>
-          <Link to="/projects" className='cursor-pointer z-50 absolute my-8 inline-block px-6 py-3  bg-gradient-to-r  from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors duration-300'>
+          <Link to="/projects" className='cursor-pointer z-50 absolute my-8  inline-block px-6 py-3 left-[28%]  md:left-[44%]  bg-gradient-to-r  from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors duration-300'>
             View All Projects </Link>
         </button>
 
