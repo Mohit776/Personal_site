@@ -27,12 +27,15 @@ const About = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+
+
   const AboutData = [
   {point :"🚀 Second-Year Computer Science Student | Passionate About Technology & Problem-Solving"},
  {point :"Got 8.9 CGPA in First Year and excelling in my batch."},
- {point :"Currently learning DSA in C++, MERN stack, and exploring AI ."},
- {point :"Driven to create innovative solutions, contribute to impactful projects, and grow through collaboration."},
-{point :" Open to connecting with peers, mentors, and professionals to share ideas, learn, and build a meaningful career in tech."}
+ {point :"💻 Completed the MERN stack and built hands-on projects."},
+ {point :"-🖥️ Learning C++ (DSA) with a strong problem-solving approach."},
+ {point :"-🤖 Currently exploring AI/ML to expand my skill set."},
+
   ];
 
   return (
