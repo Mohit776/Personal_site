@@ -6,14 +6,7 @@ const contactInfo = {
   resumeUrl: "/resume/Mohit_Resume.docx" // or your actual public path
 };
 
-const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = contactInfo.resumeUrl;
-    link.download = 'Mohit_Resume.docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 const navLinks = [
   { name: "Home", href: "/", icon: <FaHome /> },
   { name: "Projects", href: "/projects", icon: <FaProjectDiagram /> },
@@ -45,7 +38,7 @@ const Navbar = () => (
           </a>
         </li>
       ))}
-      <a href="/resume/Mohit_Resume.pdf" className="flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-white/80 hover:text-cyan-300 hover:bg-white/10 hover:backdrop-blur-lg border border-transparent hover:border-cyan-400/30">
+      <a href="https://drive.google.com/file/d/1PdUPhis-vDRYJl8lVzULJTGq8TZ5B-ia/view?usp=sharing" className="flex items-center gap-1 px-3 py-1 rounded-lg transition-all duration-200 text-white/80 hover:text-cyan-300 hover:bg-white/10 hover:backdrop-blur-lg border border-transparent hover:border-cyan-400/30">
       
       <FaFileDownload/>    <span className="hidden sm:inline">Resume</span></a>
     </ul>

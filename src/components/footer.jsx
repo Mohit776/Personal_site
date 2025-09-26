@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: <FaGithub />, url: 'https://github.com/mohit776', name: 'GitHub' },
+    { icon: <FaGithub />, url: 'https://github.com/Mohit776', name: 'GitHub' },
     { icon: <FaLinkedin />, url: 'https://linkedin.com/in/mohitaggarwal551', name: 'LinkedIn' },
     { icon: <IoLogoInstagram />, url: 'https://www.instagram.com/mohit___551/', name: 'Instagram' },
     { icon: <SiLeetcode />, url: 'https://leetcode.com/u/mohit551/', name: 'LeetCode' }

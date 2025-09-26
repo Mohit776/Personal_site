@@ -33,8 +33,8 @@ const About = () => {
   {point :"🚀 Second-Year Computer Science Student | Passionate About Technology & Problem-Solving"},
  {point :"Got 8.9 CGPA in First Year and excelling in my batch."},
  {point :"💻 Completed the MERN stack and built hands-on projects."},
- {point :"-🖥️ Learning C++ (DSA) with a strong problem-solving approach."},
- {point :"-🤖 Currently exploring AI/ML to expand my skill set."},
+ {point :"🖥️ Learning C++ (DSA) with a strong problem-solving approach."},
+ {point :"🤖 Currently exploring AI/ML to expand my skill set."},
 
   ];
 

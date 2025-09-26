@@ -65,7 +65,7 @@ const Hero = () => {
 
               </div>
               <a
-                href = "/resume/Mohit_Resume.pdf"
+                href = "https://drive.google.com/file/d/1PdUPhis-vDRYJl8lVzULJTGq8TZ5B-ia/view?usp=sharing"
                 style={{ fontFamily: "Yatra One, sans-serif" }}
                 className="flex cursor-pointer w-[30%] h-8 justify-center items-center space-x-2 bg-purple-600 hover:bg-purple-900 text-white px-2  rounded-md transition-colors "
               >
