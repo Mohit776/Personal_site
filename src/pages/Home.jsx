@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import About from "../components/About";
 import Project from "../components/Project";
-import FadeInWhenVisible from "../assets/FadeInWhenVisible";
+
 import { Analytics } from "@vercel/analytics/react";
 
 const Home = () => {
@@ -16,21 +16,21 @@ const Home = () => {
         {/* For Vercel analytics */}
         <Analytics />
 
-        <FadeInWhenVisible>
-          <Hero id="home" />
-        </FadeInWhenVisible>
 
-        <FadeInWhenVisible>
-          <About id="about" />
-        </FadeInWhenVisible>
+        <Hero id="home" />
 
-        <FadeInWhenVisible>
-          <Skills id="skills" />
-        </FadeInWhenVisible>
 
-        <FadeInWhenVisible>
-          <Project id="Project" />
-        </FadeInWhenVisible>
+
+        <About id="about" />
+
+
+
+        <Skills id="skills" />
+
+
+
+        <Project id="Project" />
+
       </main>
 
       <Footer />
