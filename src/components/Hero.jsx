@@ -95,8 +95,8 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 
             w-[140%] h-[140%] sm:w-[130%] sm:h-[130%] lg:w-[140%] lg:h-[140%]">
               <Orb
-                hoverIntensity={0.8}
-                rotateOnHover={true}
+                hoverIntensity={0.3}
+                rotateOnHover={false}
                 hue={330}
                 forceHoverState={false}
               />
