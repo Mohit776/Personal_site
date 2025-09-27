@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import("tailwindcss").Config;
@@ -132,7 +133,7 @@ const Skills = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? 135 : -135 , scale: 0.75 }}
-              whileInView={{ opacity: 1, x: 0 , scale: 1.02 }}
+              whileInView={{ opacity: 1, x: 0 , scale: 1 }}
               transition={{ duration: 1, delay: index * 0.2 }} // Adjusted delay timing
               viewport={{ once: true }}
               className="w-full flex items-center justify-center"
