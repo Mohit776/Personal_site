@@ -25,8 +25,8 @@ const Projectpage = () => {
       description: "Detailed description of the project goes here...",
       image: airbnb,
       technologies: ["Express", "Node.js", "MongoDB","bootstrap"],
-      liveDemo: "https://airbnb551.onrender.com/",
-      github: "https://github.com/Mohit776/Airbnb_Clone"
+      liveDemo: "https://hometrips.onrender.com/",
+      github: "https://github.com/Mohit776/HomeTrip"
     }
     // Add more projects as needed
   ];

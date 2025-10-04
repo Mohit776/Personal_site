@@ -14,8 +14,8 @@ const Project = () => {
       description: "This project is my  full stack project, majorly focused on backend and tried to give responsive UI, dynamic listings, user authentication, and booking features using modern web development technologies.",
       image: airbnb, // Add your project images
       tech: ["Node.js", "MongoDB","TailwindCSS","ExpressJS"],
-      github: "https://github.com/Mohit776/Airbnb_Clone",
-      live: "https://airbnb551.onrender.com/"
+         liveDemo: "https://hometrips.onrender.com/",
+      github: "https://github.com/Mohit776/HomeTrip"
     },
     {
       title: "Spotify clone",
