@@ -8,7 +8,7 @@ const contactInfo = {
 
 const navLinks = [
   { name: "Home", href: "/", icon: <FaHome /> },
-  { name: "Projects", href: "/projects", icon: <FaProjectDiagram /> },
+ // { name: "Projects", href: "/projects", icon: <FaProjectDiagram /> },
 ];
 
 const Navbar = () => {
@@ -56,7 +56,7 @@ const Navbar = () => {
 
           {/* Resume Button */}
           <motion.a
-            href="https://drive.google.com/file/d/1PdUPhis-vDRYJl8lVzULJTGq8TZ5B-ia/view?usp=sharing"
+            href="https://drive.google.com/file/d/11VFntSulTXT9OTepjkqG4YXyP3DXNFTm/view?usp=sharing"
             whileHover={{
               scale: 1.05,
               y: -2

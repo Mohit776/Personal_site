@@ -35,7 +35,7 @@ const Footer = () => {
   };
 
   return (
-    < section id='contact'>
+    <section id='contact' className="scroll-mt-32">
 
       <footer className="bg-gray-900 text-gray-300 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

@@ -4,7 +4,7 @@ import TrueFocus from "../assets/Truefocus.jsx";
 import Orb from "../assets/Orb.jsx";
 import Particles from "../assets/Particales.jsx";
 import TextType from "../assets/Type.jsx";
-import { FaFileDownload } from "react-icons/fa";
+import { FaFileDownload, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 
@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section id="home">
-      <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden pt-8 px-4 sm:px-8 md:px-12 lg:px-28">
+      <div className="bg-gray-950 relative min-h-screen w-full overflow-hidden pt-8 sm:pt-40 md:pt-8 px-4 sm:px-8 md:px-12 lg:px-28">
         {/* Particles Background - Adjusted for mobile */}
         <div className="absolute inset-0 z-0">
           <Particles
@@ -64,15 +64,36 @@ const Hero = () => {
                 />
 
               </div>
-              <a
-                href="https://drive.google.com/file/d/1PdUPhis-vDRYJl8lVzULJTGq8TZ5B-ia/view?usp=sharing"
-                style={{ fontFamily: "Yatra One, sans-serif" }}
-                className="flex cursor-pointer w-[30%] h-8 justify-center items-center space-x-2 bg-purple-600 hover:bg-purple-900 text-white px-2  rounded-md transition-colors "
-              >
-                <FaFileDownload />&nbsp;&nbsp;
-                <span> Resume</span>
+              <div className="flex flex-wrap gap-4 mt-8">
+                <a
+                  href="https://drive.google.com/file/d/11VFntSulTXT9OTepjkqG4YXyP3DXNFTm/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontFamily: "Yatra One, sans-serif" }}
+                  className="flex cursor-pointer justify-center items-center space-x-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1"
+                >
+                  <FaFileDownload />
+                  <span>Resume</span>
+                </a>
 
-              </a>
+                <a
+                  href="https://www.linkedin.com/in/mohitaggarwal551/" // Replace with actual LinkedIn URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center p-3 bg-gray-800 text-white rounded-full hover:bg-[#0077b5] transition-all duration-300 shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-1"
+                >
+                  <FaLinkedin size={20} />
+                </a>
+
+                <a
+                  href="https://github.com/Mohit776" // Replace with actual GitHub URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center p-3 bg-gray-800 text-white rounded-full hover:bg-[#333] transition-all duration-300 shadow-lg hover:shadow-gray-500/25 transform hover:-translate-y-1"
+                >
+                  <FaGithub size={20} />
+                </a>
+              </div>
 
             </div>
           </div>

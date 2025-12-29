@@ -22,9 +22,8 @@ const About = () => {
   ];
 
   return (
-    <>
-      <section id='about'></section>
-      <div className='bg-gray-950 min-h-screen w-full overflow-hidden'>
+    <section id='about' className='bg-gray-950 min-h-screen w-full overflow-hidden scroll-mt-32 relative'>
+      <div className='relative'>
         <div className="absolute z-0 h-full w-full opacity-20 md:opacity-50">
           <Particles
             particleColors={["#ffffff", "#ffffff"]}
@@ -124,7 +123,7 @@ const About = () => {
           }
         `}</style>
       </div>
-    </>
+    </section>
   );
 };
 
