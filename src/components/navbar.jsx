@@ -27,8 +27,7 @@ const Navbar = () => {
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          style={{ fontFamily: "Delius" }}
-          className="text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300 select-none cursor-pointer"
+          className="text-2xl font-bold tracking-wider font-yatra text-gradient-premium select-none cursor-pointer"
         >
           Mohit Aggarwal
         </motion.div>
@@ -40,7 +39,7 @@ const Navbar = () => {
               <motion.li key={link.name} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }}>
                 <motion.a
                   href={link.href}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                     y: -2
                   }}
@@ -54,11 +53,11 @@ const Navbar = () => {
               </motion.li>
             ))}
           </ul>
-          
+
           {/* Resume Button */}
           <motion.a
             href="https://drive.google.com/file/d/1PdUPhis-vDRYJl8lVzULJTGq8TZ5B-ia/view?usp=sharing"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               y: -2
             }}
@@ -85,15 +84,14 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <motion.div
         initial={false}
-        animate={{ 
+        animate={{
           opacity: isMenuOpen ? 1 : 0,
           scale: isMenuOpen ? 1 : 0.95,
           y: isMenuOpen ? 0 : -20
         }}
         transition={{ duration: 0.3 }}
-        className={`fixed top-24 left-1/2 z-40 -translate-x-1/2 w-[85%] rounded-2xl bg-gradient-to-br from-white/20 via-purple-500/20 to-blue-500/20 backdrop-blur-2xl border border-purple-400/40 shadow-2xl shadow-purple-500/20 p-6 ${
-          isMenuOpen ? "block" : "hidden"
-        }`}
+        className={`fixed top-24 left-1/2 z-40 -translate-x-1/2 w-[85%] rounded-2xl bg-gradient-to-br from-white/20 via-purple-500/20 to-blue-500/20 backdrop-blur-2xl border border-purple-400/40 shadow-2xl shadow-purple-500/20 p-6 ${isMenuOpen ? "block" : "hidden"
+          }`}
       >
         <div className="flex flex-col gap-3">
           {navLinks.map((link, index) => (
@@ -111,7 +109,7 @@ const Navbar = () => {
               <span style={{ fontFamily: "Orbitron, monospace", letterSpacing: "0.08em" }}>{link.name}</span>
             </motion.a>
           ))}
-          
+
           <motion.a
             href="https://drive.google.com/file/d/1PdUPhis-vDRYJl8lVzULJTGq8TZ5B-ia/view?usp=sharing"
             initial={{ opacity: 0, x: -20 }}

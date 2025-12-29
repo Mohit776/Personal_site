@@ -51,26 +51,26 @@ const skillSections = [
   {
     title: "Frontend Development",
     items: frontend,
-   
-  
+
+
   },
   {
     title: "Backend Development",
     items: backend,
 
-   
+
   },
   {
     title: "Programming Languages",
     items: programing,
 
-   
+
   },
   {
     title: "Tools & Technologies",
     items: otherTech,
-    
-  
+
+
   }
 ];
 
@@ -123,7 +123,7 @@ const Skills = () => {
             />
           </div>
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto px-4"> 
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto px-4">
             Technologies and tools I work with to create amazing digital experiences
           </p>
         </motion.div>
@@ -132,13 +132,13 @@ const Skills = () => {
           {skillSections.map((section, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? 135 : -135 , scale: 0.75 }}
-              whileInView={{ opacity: 1, x: 0 , scale: 1 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? 135 : -135, scale: 0.75 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 1, delay: index * 0.2 }} // Adjusted delay timing
               viewport={{ once: true }}
               className="w-full flex items-center justify-center"
             >
-        
+
               <Dock
                 items={section.items}
                 panelHeight={95} // Base height for mobile
@@ -146,9 +146,9 @@ const Skills = () => {
                 magnification={110} // Base magnification for mobile
                 className="sm:panelHeight-100 md:panelHeight-120" // Responsive panel height
                 spring={{ mass: 0.1, stiffness: 150, damping: 12 }}
-              
+
               />
-          
+
             </motion.div>
           ))}
         </div>

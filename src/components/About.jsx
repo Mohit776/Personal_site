@@ -81,9 +81,9 @@ const About = () => {
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
-            onContactClick={() =>   window.open("https://www.linkedin.com/in/mohitaggarwal551/", "_blank") }
+            onContactClick={() => window.open("https://www.linkedin.com/in/mohitaggarwal551/", "_blank")}
 
-           
+
           />
 
           {/* Timeline - Adjusted for mobile */}
