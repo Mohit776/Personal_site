@@ -21,6 +21,14 @@ const Project = () => {
     return () => clearInterval(interval);
   }, [selectedProject]);
   const projects = [
+     {
+      title: "The Wooden Stories",
+      description: "Wooden Stories is a full-stack web application built with a strong focus on backend architecture, performance, and real-world e-commerce workflows. It features a responsive, modern UI with dynamic product listings, secure user authentication, shopping cart and booking/payment functionality, and an admin dashboard for complete product management. The project leverages a Node.js/Express backend with Prisma and MySQL, cloud image storage, and a React + Vite frontend to deliver a smooth, scalable user experience end to end.",
+      images: ["/Wooden/image.png", "/Wooden/image copy.png", "/Wooden/image copy 2.png", "/Wooden/image copy 3.png", "/Wooden/image copy 4.png", , "/Wooden/image copy 5.png"], // Add your project images
+      tech: ["Node.js", "TailwindCSS", "ExpressJS", "React", "MySql", "Cloudinary", "Razorpay"],
+      live: "https://the-wooden-stories.vercel.app/",
+      github: "https://github.com/Mohit776/The-Wooden-Stories"
+    },
     {
       title: "Hometrip",
       description: "This project is my  full stack project, majorly focused on backend and tried to give responsive UI, dynamic listings, user authentication, and booking features using modern web development technologies.",
@@ -29,14 +37,7 @@ const Project = () => {
       live: "https://hometrips.onrender.com/",
       github: "https://github.com/Mohit776/HomeTrip"
     },
-    {
-      title: "The Wooden Stories",
-      description: "Wooden Stories is a full-stack web application built with a strong focus on backend architecture, performance, and real-world e-commerce workflows. It features a responsive, modern UI with dynamic product listings, secure user authentication, shopping cart and booking/payment functionality, and an admin dashboard for complete product management. The project leverages a Node.js/Express backend with Prisma and MySQL, cloud image storage, and a React + Vite frontend to deliver a smooth, scalable user experience end to end.",
-      images: ["/Wooden/image.png", "/Wooden/image copy.png", "/Wooden/image copy 2.png", "/Wooden/image copy 3.png", "/Wooden/image copy 4.png", , "/Wooden/image copy 5.png"], // Add your project images
-      tech: ["Node.js", "TailwindCSS", "ExpressJS", "React", "MySql", "Cloudinary", "Razorpay"],
-      live: "https://the-wooden-stories.vercel.app/",
-      github: "https://github.com/Mohit776/The-Wooden-Stories"
-    },
+   
     {
       title: "CodeVeda",
       description: "This project is a UI/UX-focused web platform designed for the Code Veda Hackathon, built to showcase clean design thinking, usability, and intuitive interaction flows. It emphasizes responsive layouts, accessible components, and smooth micro-interactions that guide users naturally through the experience. The design prioritizes clarity, minimal friction, and modern visual aesthetics, with a strong focus on real user problems, quick navigation, and consistency across devices. The goal is simple: deliver an interface that not only looks polished, but actually feels effortless to use.",
