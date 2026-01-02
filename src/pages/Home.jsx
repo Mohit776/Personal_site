@@ -21,7 +21,7 @@ const Home = () => {
 
 
 
-        <About id="about" />
+        {/* <About id="about" /> */}
 
 
 
